@@ -34,7 +34,7 @@ window.addEventListener("load", function () {
 
     const acx = Math.atan(acl.x / Math.sqrt(acy2 + acz2));
     const acy = Math.atan(acl.y / Math.sqrt(acx2 + acz2));
-    ball.setGravity(acx, -acy);
+    ball.setGravity(-acx, acy);
 
     lines.setAngle(acx, acy);
   });
@@ -149,7 +149,7 @@ class Lines {
     context.translate(CENTER.x, CENTER.y);
     context.rotate(this.anglex);
     context.beginPath();
-    context.strokeStyle = "yellow";
+    context.strokeStyle = "green";
     context.moveTo(-5000, 0);
     context.lineTo(5000, 0);
 
@@ -163,7 +163,7 @@ class Lines {
     context.translate(CENTER.x, CENTER.y);
     context.rotate(Math.PI / 2 + this.angley);
     context.beginPath();
-    context.strokeStyle = "blue";
+    context.strokeStyle = "red";
     context.moveTo(-5000, 0);
     context.lineTo(5000, 0);
 
